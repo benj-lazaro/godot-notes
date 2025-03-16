@@ -1,0 +1,55 @@
+Set Up Godot 
+------------
+- Download the latest Godot game engine
+    - From the official website (https://godotengine.org/)
+
+    - Get the regular Godot Engine
+        - NOT the .NET version
+
+
+- To install the game engine
+    - Extract the installer 
+        - To a preferred folder / location
+
+    - (For Windows ONLY) 
+        - Two executable files are extracted from the .zip files
+
+        - Delete the Godot console
+            - It provides more information as Godot is currently running
+            - Intended for advanced users
+
+
+- To launch the game engine
+    - Double-click Godot icon
+
+    - Launches the Project Manager
+        - List projects created
+
+
+- To create a new project
+    - Click on the button "Create New Project"
+        - Alternatively clicking the button "Create"
+        - Located on the top-left corner of the Project Manager
+
+    - Opens the "Create New Project" window
+
+    - Assign a new on the field "Project Name"
+        - NOTE: The initial project name can be changed at a later time
+
+    - Optionally change the value assigned on the field "Project Path"
+        - NOTE: Click the button "browser"
+            - To change the project's folder location
+
+    - On the "Renderer" section
+        - Decides how advanced the graphics will be
+            - As well as supported platforms
+
+        - For 2D pixel art game development
+            - Choose the option "Compatibility"
+
+        - NOTE: This option can be changed at a later time
+    
+    - Click the button "Create"
+        - NOTE: On older version, this is labeled "Create & Edit"
+
+    - A new Godot project is create
