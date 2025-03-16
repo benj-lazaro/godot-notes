@@ -1,2 +1,3 @@
 # Godot Notes
-Notes on Godot 4
+
+Notes on Godot 4 2D development
