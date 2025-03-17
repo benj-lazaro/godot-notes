@@ -1,0 +1,208 @@
+Basics of Godot
+---------------
+- Godot User Interface
+    - Top toolbar (top middle)
+        - 2D        = Shows the 2D part of the game
+        - 3D        = Shows the 3D part of the game
+        - Script    = Built-in editor that allows to write scripts for the game
+        - AssetLib  = Browse & download assets & extensions for Godot
+
+    - FileSystem (bottom left)
+        - Displays all files of a project
+
+        - NOTE: The Godot icon (icon.svg)
+            - Is automatically added whenever a new Godot project is created
+
+    - Scene Tree (top left)
+        - Displays all nodes in a scene
+
+    - Inspector (top right)
+        - View and change details of a selected node in the viewport
+
+
+What are Nodes and Scenes
+-------------------------
+- Nodes
+    - Are the building blocks in Godot
+    
+    - Everything that is going to be created
+        - Is built out of nodes
+
+    - There are different types of nodes
+        - Each type does a specific thing (function)
+        - e.g. a player's image, a sound effect, a text on screen
+
+
+- Scenes
+    - Are a collection of nodes
+    - e.g. a player character, a game level 
+
+
+To create a new 2D Scene
+------------------------
+- On the Scene Tree
+    - Click the button "2D Scene"
+
+    - A new node named "Node2D" is created
+        - This serves as a base for the created scene
+
+        - This 1st node is referred as the "Root Node"
+            - New nodes can be added into this node
+
+
+To add a new node in the Root Node
+----------------------------------
+- Add Godot's icon (icon.svg) into the Root Node
+
+    - On the FileSystem
+        - Click and drag the file "icon.svg" into Godot's viewport (center screen)
+
+    - On the viewport
+        - The icon is added 
+
+    - On the Scene Tree
+        - A new node named "Icon" is created
+
+    - Add two more of the same "icon.svg" into the viewport
+        - Resulting to two more nodes added into the Scene Tree
+        - Each named "Icon2" and "Icon3" respectively
+
+
+- Clicking any of the Icon node in the Scene Tree
+    - The corresponding icon in the viewport is highlighted
+
+    - Hovering the mouse cursor over a node
+        - Displays the node type (e.g. Sprite2D)
+        
+        - NOTE: A "Sprite2D" is a node that shows an image in the game
+  
+
+To rename a node in the Scene Tree
+----------------------------------
+- Double-click the targeted node
+    - Alternatively, press F2 
+
+    - Rename the node
+
+    - Press ENTER to save the changes
+
+
+To save a Scene in the FileSystem
+----------------------------------
+- Press CTRL + S
+    - Provide the name of the Scene    
+
+    - Click the button "Save"
+        - Alternatively, press ENTER
+
+
+To re-open a Scene from the FileSystem
+--------------------------------------
+- Simply double-click the name of the Scene
+    - Listed in the FileSystem
+
+
+To move a node in a Scene
+-------------------------
+- Use of the first four (4) toobar buttons (above the viewport):
+    - Select Mode (Q)
+        - Allows to select any node in a Scene
+        - NOTE: Clicking any of the highlighted points of a node
+            - Allows to stretch the size of the node
+
+
+    - Move Mode (W)
+        - Moves the selected node around the Scene
+
+        - The selected node has two (2) arrows
+            - Red arrow     = moves the node left & right
+            - Green arrow   = moves the node up & down
+
+
+    - Rotate Mode (E)
+        - Rotates the selected node in any specific direction
+
+
+    - Scale Mode (S)
+        - Scales the size of the selected node
+
+        - To scale proportionally
+            - Hold the SHIFT button down
+
+    
+    - NOTE: To UNDO any recent actions made, press CTRL + Z
+
+
+    - Select a node in the viewport
+        - Use the Select Mode (Q)
+
+        - Click the targeted node
+
+
+    - On the Inspector
+        - Expand the drop-down menu "Transform"
+
+        - Shows the selected node's
+            - Position
+                - Moving the node up
+                    - Decreases the value of "y"
+
+                - Moving the node down
+                    - Increases the value of "y"
+
+                - Moving the node right
+                    - Increases the value of "x"
+
+                - Moving the node left
+                    - Decreases the value of "x"
+
+            - Rotation
+                - Moving the slider, rotates the selected node
+
+            - Scale
+                - Multiplies the selected node's original size
+                    - With the user-entered value for the node's "x" & "y" axis
+                    - This increases / decreases the size of the node
+
+                    - NOTE: By default, both axis is assigned with the value of 1
+
+            - Skew
+                - Skews the selected node in a specific direction
+                
+                - Neat for a few effect
+                    - NOT quite useful in most cases
+    
+
+To run the game
+---------------
+- On the toolbar just above the Inspector
+    - Run Project (F5)
+        - Start the game from the very beginning
+
+    - Run Current Scene (F6)
+        - Runs the selected Scene ONLY
+            - NOT the rest of the game
+
+        - Opens a new window with the game in action
+
+        - Opens the Output window at the bottom of the viewport
+            - Provides more information about the current running game
+    
+
+To close the running game
+-------------------------
+- Click the button Stop Running Project (F8)
+    - Alternatively, close the game window 
+    
+
+    - NOTE: The viewport has a Blue colored outline
+        - Shows the boundaries of the game's window
+
+
+To remove a node from the Scene Tree
+------------------------------------
+- Click on the targeted node
+    - Press DELETE
+
+    - Click the button "OK"
+        - In order to proceed with the deletion

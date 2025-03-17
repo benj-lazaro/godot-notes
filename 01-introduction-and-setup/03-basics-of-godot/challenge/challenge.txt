@@ -1,0 +1,9 @@
+Challenge
+---------
+- Add Godot's icon into the viewport
+
+- Move the icon into the center of the screen (viewport)
+
+- Rotate the icon to be upside down
+
+- Scale the icon to be twice as big as it usually is
