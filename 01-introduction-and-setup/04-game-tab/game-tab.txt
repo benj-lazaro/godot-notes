@@ -1,0 +1,99 @@
+Godot's 4.4 Game Tab
+--------------------
+- A look into the new tab "Game" 
+    - An added feature on Godot's version 4.4 release
+    
+    - It offers a floating Game Workspace
+        - When the "Run Project" is clicked
+
+        - Launches a separate window (i.e. Game Workspace)
+            - With a toolbar located at the top of the window
+            - Offers various tools while the game is running
+
+        - Then runs the project on floating the Game Workspace
+
+    - Using this tab is completely OPTIONAL
+
+
+Game Workspace Buttons
+----------------------
+- Starting from the leftmost tool in the toolbar
+    - Button "Suspend"
+        - Pauses any moving node inside the running game
+
+    - Selection mode "Input"
+        - Selected by default
+        - Plays the game normally
+
+    - Selection mode "2D"
+        - Disables ALL inputs to the game
+            - e.g. unable to move a game character
+
+        - Enable to click on a node
+            - Show related informaton in the Inspector
+            - While the game is running
+
+    - Selection mode "3D"
+        - Same as the previous one except for 3D games
+
+    - Button "Toggle Selection Visibility"
+        - Shows an outline surrounding a selecte node
+        - Enabled by default
+
+    - Button "Select Mode"
+        - Allows to select a node
+            - While the gmae is running
+
+        - Enabled by default
+
+    - Button "Show list of selectable nodes at position clicked"
+        - ONLY works for overlapping nodes at the same area 
+
+        - When enabled
+            - Holding down the left-mouse button on the area
+                - Where nodes overlaps
+
+            - Launches a context-menu with a list
+                - Of overlapping nodes to choose from
+
+
+    - Button "Override the in-game camera"
+        - Moves the in-game camera
+
+        - When enabled
+            - To zoom in or out camera
+                - Mouse's scroll wheel
+                - Two fingers on a laptop's touchpad
+
+            - To drag the camera
+                - Hold down mouse's scroll wheel
+                - Hold CTRL + two fingers on a laptop's touchpad
+
+        - When disabled
+            - Reverts back the in-game camera
+                - To its initial settings
+
+    - Button streching mode #1
+        - Selected by default
+            - The Game Workspace is smaller than the desired size of the game
+    
+    - Button streching mode #2 
+        - Scales up the game's height but retains the same shape
+            - Feels like the game is zoomed out
+
+    - Button streching mode #3
+        - Streches the game in order to fit the Game Workspace
+            - Ignores the game's intended shape
+
+        - NOTE: ONLY works when the Game Workspace's window is maximized 
+
+    - Button last "three-dotted column"
+        - Unchecking the checkbox "Make Game Workspace Floating on Next Play"
+            - Launches the Game Workspace inside Godot's editor
+            
+            - Instead of launching a separate (floating) window
+                - And run the game
+
+        - Unchecking the checkbox "Embed Game on Next Play"
+            - Launches a floating Game Workspace
+                - Without the embedded toolbar
