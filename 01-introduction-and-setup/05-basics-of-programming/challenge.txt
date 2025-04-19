@@ -1,8 +1,6 @@
-Challenge
----------
-- Create a new 2DSprite node
-    - Using Godot's icon (icon.svg)
-    
+Challenge #02
+-------------
+- Create a new 2DSprite node   
     - Attach a new script to it
 
     - Print "Hello there!" at the start of the game
