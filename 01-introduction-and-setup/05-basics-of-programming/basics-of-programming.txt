@@ -1,0 +1,127 @@
+Basics of Programming in Godot
+------------------------------
+- Programming is the process of writing instructions
+    - For a computer follow
+
+    - In the context of game development
+        - Instructions that controls what happens when the game is running
+
+    - Instructions are written using programming languages
+        - Godot using GDScript
+
+
+To write code in a script
+-------------------------
+- Select a node to be programmed from the viewport
+    - On the Inspector
+        - Scroll down until "Script" is reached
+        - Click on <empty>
+        - The click on "New Script..."
+
+    - Launches the "Attach Node Script" window
+        - On the field "Template"
+            - Click checkbox
+            - Assigns the value "Node: Default"
+
+            - NOTE: This adds some basic code when creating the script
+    
+        - On the field "Path"
+            - Assigns the path and name of the script
+            
+            - By default
+                - The node and script name will have the SAME name
+                - The script has a filename extension of ".gd"
+
+        - Click the button "Create"
+            - Creates the script
+            - Launches the script editor on Godot's viewport
+            - Maximize the script editor
+
+    - On the Scene Tree
+        - The targeted node will have a "script" icon next to it
+
+    - On the Inspector
+        - The node's field "Script" 
+        - Assigned with the script's filename as value
+
+
+Example Code Walkthrough 
+------------------------
+- A walkthough of the created script for the example Godot project
+    - Based on the project challenge of lecture #3
+
+    - The line "extends Sprite2D"
+        - The script is meant to be used ONLY be used on nodes of type "Sprite2D"
+
+    - A comment in GDScript
+        - Is the same as in Python, that it starts with "#"
+
+    - The line "func _ready(): "
+        - This is a function
+
+        - It runs its own code ONLY ONCE
+            - When the associated node is added into the game
+
+        - NOTE: Pre-generated code "pass" does NOTHING
+            - Serves as a placeholder inside a function during development
+            
+            - Prevents GDScript from triggering an error message
+                - Stating that the function is EMPTY
+
+    - The function "print()"
+        - Prints the passed argument value on Godot's "Output" panel
+
+    - The line "func _process(delta)"
+        - This is also a function
+
+        - It runs its own code as many times per second
+            - Runs indefinitely until the game is terminated
+
+        - NOTE: If the argument "delta" is NOT used
+            - Rename it to "_delta"
+            - Prevents GDScript from triggering a warning message
+
+
+Access Node's Inspector Settings Through Code
+---------------------------------------------
+- To change the 2DSprite node's initial rotation position
+    - Inside function _ready()
+        - Add the line
+    
+            rotation_degrees = 45
+
+    - Run the game
+        - The Sprite2D node starts at 45 degrees
+            
+
+- To rotate the 2DSprite node clockwise at the game runs
+    - Inside function _process(_delta)
+        - Add the line 
+
+            rotation_degrees += 1
+
+    - Run the game
+        - The Sprite2D node's rotation degrees is incremented by 1
+            - For each cycle until the game terminates
+
+
+- To change the 2DSprite node's initial x-axis position
+    - Inside function _ready()
+        - Add the line
+    
+            position.x = 900
+
+    - Run the game
+        - The Sprite2D node starts at 900 of the Game Workspace's x-axis
+
+
+- To move the 2DSprite node to the left of the Game Workspace (and beyond)
+    - Inside function _process(_delta)
+        - Add the line 
+
+            rotation_degrees += 1.5
+
+    - Run the game
+        - The Sprite2D node's x-axis is increment by 1.5
+            - For each cycle until the game terminates
+            

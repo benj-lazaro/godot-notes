@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://mv1h738dfqq1"]
+
+[ext_resource type="Texture2D" uid="uid://dxwitbc57k6ci" path="res://icon.svg" id="1_3hls8"]
+[ext_resource type="Script" uid="uid://eshifxcn56m3" path="res://my_sprite.gd" id="2_hbghi"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="MySprite" type="Sprite2D" parent="."]
+position = Vector2(585, 322)
+rotation = -3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_3hls8")
+script = ExtResource("2_hbghi")
