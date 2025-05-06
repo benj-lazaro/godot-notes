@@ -1,0 +1,10 @@
+Section Intro: Player Movement
+------------------------------
+- This section focuses on:
+    - Fundamental programming concepts
+        - Variable creation
+        - Conditionals using "if" statements
+
+    - How to move the player in the game
+        - Reading user inputs
+        - Moving user using animated sprites
