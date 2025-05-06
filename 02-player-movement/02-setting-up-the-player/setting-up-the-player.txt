@@ -1,0 +1,154 @@
+Setting Up The Player
+---------------------
+- This lecture focuses on 
+    - Setting up a scene for the player character using a few nodes
+
+
+To Create a Player Character
+----------------------------
+- Create a new Scene that will ONLY contain the player character
+    - On the "Scene" tab
+        - Click the button "Other Node"
+    
+    - Opens the floating "Create New Node" window
+        - Loads all of Godot's node types
+            - Blue  = 2D Game nodes
+            - Green = User Interface (e.g. button, text)
+            - Red   = 3D Game nodes
+            - White = 
+
+                - Blue color    = 2D game nodes
+                - Green color   = User Interface (e.g. button, text)
+                - Red color     = 3D game nodes
+                - White color   = For everthing else (i.e. general purpose)
+
+    - Expand "CollisionObject2D"
+
+    - Expand "PhysicsBody2D"
+
+    - Select-click "CharacterBody2D"
+        - This contains a lot of things inside that 
+            - Make is very useful as a player character
+    
+        - Click button "Create"
+    
+    - A new "CharacterBody2D" node is added on the "Scene" tab
+        - NOTE: A warning "Node configuration warning" is triggered
+            - Due to the absence of a "CollisionShape2D"
+
+        - The "CollisionShape2D" node 
+            - Determines the shape of the player character
+            - It is also used to detect if a player character collides into something in the game
+            - It shows the area where collisions could happen
+
+    - Right-click on "CharacterBody2D"
+        - Select the menu item "Add Child Node..."
+        - Opens the floating "Create New Node" window
+        - On the "Search" field, type "CollisionShape2D"
+        - Click the button "Create"
+
+    - A new "CollisionShape2D" is added as a child of the "CharacterBody2D" node
+        - NOTE: A warning "Node configuration warning" is triggered
+            - Due to the absence of a shape for the "CollisionShape2D" node
+
+    - To define / select a shape for the "CollisionShape2D" node
+        - Look at the "Inspector" tab
+
+        - On the field "Shape"
+            - Click the drop-down menu
+            - Choose the corresponding shape options
+
+        - For the player character
+            - Choose the "New CapsuleShape2D" menu item
+
+        - A tiny capsule shape appears in the viewport
+            - The Orange dots can be used to adjust the radius & height of the shape
+
+            - Alternatively, on the "Inspector" tab
+                - Click the field "Shape"
+                - Adjust values of the fields "Radius" & "Height"
+    
+
+- To add a sprite to the "CollisionShape2D"
+    - On the "FileSystem" tree
+        - Open the asset sub-folder "Actor"
+        - Open the folder "Characters"
+        - Open the folder "CaveLion"
+        - Open the folder "SeparateAnim"
+        - Double-click the image file "Item.png"
+            - Corresponding image file is loaded on the "Inspector" tab
+   
+    - From the "FileSystem" tree
+        - Click and drag the "Item.png" to the viewport
+        
+        - The corresponding character image is rendered on the viewport
+            - Although the image is blurred (or smoothen out)
+
+    - To postion the character image on the viewport
+        - On the "Inspector" tab
+            - Expand the "Transform" tab
+            - Play with the x & y axis values under the "Position" tab
+
+
+- To address the blurred pixel art image
+    - On the top menu, click "Project"
+    
+    - Click "Project Settings"
+        - Open a floating "Project Settings" window
+
+    - On the left-hand menu
+        - Click "Rendering"
+        - Click "Textures"
+        - Set the "Default Texture Filter" to "Nearest"
+            - NOTE: This prevents Godot from smoothing out the pixel art images
+
+        - Click the button "Close"
+
+    - The character image is now perfectly pixalated
+
+
+- Select the "CollisionShape2D" of the chracter image on the viewport
+    - Shape it roughly equal to the size of the character
+    
+    - Use the Orange circles to
+        - Move the "Height" and "Radius" of the "CollisionShape2D" node
+
+    - Aim to make it smaller than the character image
+
+    - To move the "CapsuleShape2D" to the foreground of the viewport
+        - On the "Scene" tree
+        - Move the "CollisionShape2D" node on below of the "Item" node
+        
+        - NOTE: The last item on the "Scene" tree will be on the foreground 
+
+
+- To save the player character
+    - Press CTRL + s
+    
+    - Open the "Save Scene As..." window
+
+    - Right-mouse click
+        - Select "New Folder..."
+        - Opens the "Create Folder" window
+        - On the "Name" field, provide the value "Scenes"
+        - Click the button "OK"
+
+    - Inside the folder "Scenes"
+        - Create another folder "Player"
+        - Click the button "OK"
+
+    - Change the default name of the file to "player.tscn"
+        - Click the button "Save"
+
+    - On the "FileSystem" tree
+        - The folder "Scenes" is added
+
+        - Expanding the folder "Scenes"
+            - The folder "Player" and scene "player.tscn" is displayed
+    
+    - Change the color of the folder "Scenes"
+        - Right-click on the folder "Scenes"
+        - Select "Set Folder Color..."
+        - Choose the item "Blue"
+
+        - NOTE: This will help visually organize the project folders

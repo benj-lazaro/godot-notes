@@ -1,0 +1,7 @@
+Challenge
+---------
+- Choose a character from the 3rd party asset that you like
+
+- Create a sprite using the corresponding character's "item.png"
+
+- Set the sprite's position to (0, 0)
