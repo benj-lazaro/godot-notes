@@ -1,0 +1,12 @@
+Accessing Our Projects
+----------------------
+- Changes in all GameDev.tv courses
+    - Instructors commit project changes 
+        - To their respective Gitlab (current) or GitHub (older projects) repository
+
+    - Red highlights are the code / content that have been removed
+
+    - Green highlishted are the code / content that have been added
+
+    
+
