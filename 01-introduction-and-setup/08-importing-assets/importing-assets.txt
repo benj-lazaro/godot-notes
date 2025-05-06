@@ -1,0 +1,61 @@
+Importing Assets
+----------------
+- Game assets are individual components when combined together
+    - Creates the world of a game
+
+    - These includes:
+        - Animations
+        - Music
+        - Sprites
+        - Sounds effects
+
+    - The 3rd-party asset that will be used for the rest of the course
+        - Ninja Adventure
+        - Made completely free by Pixel Boy & AAA; donations welcome
+        - Includes art, animation, music & sound effects
+        - Itch.io (https://pixel-boy.itch.io/ninja-adventure-asset-pack)
+
+
+To Import 3rd-party Assets
+--------------------------
+- Download the 3rd-party assets from their official online site
+    - Extract the contents of the zip file
+
+
+- Launch Godot (if not yet open)
+    - Drap and drop the asset folder on Godot's "FileSystem" Tree
+        - Specifically to the "res://" folder
+
+    - The assets are automatically imported to Godot
+
+    - Once finished
+        - The name of the assset folder will be added into the "FileSystem" tree
+
+    - NOTE: Remove previous lectures' files & scripts
+        - With the "icon.svg" file left behind
+
+
+To View Asset Contents
+----------------------
+- Click the drop-down arrow to open the folder
+    - Double-clicking an image or a sprite 
+        - Opened & viewed in the "Inspector" tab
+        
+    - Double-clicking music file (.ogg)
+        - Launches a floating "Audio Stream Importer" window
+        - Offers the ability to play the music file
+
+    - Double-clicking sound file (.wav)
+        - Loads in the "Inspector" tab
+        - Offers the ability to play the sound file
+
+
+Organizing The Asset Folder
+----------------------------
+- The asset folder (and its sub-folders) can be color coded
+    - This help visually differentiate * organize folders in the "FileSystem"
+
+    - Click on the asset folder
+        - Right-click & select the menu item "Set Folder Color..."
+        - Choose your preferred color
+        
