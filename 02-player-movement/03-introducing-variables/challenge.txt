@@ -1,0 +1,11 @@
+Challenge
+---------
+- Create a variable called "first_name"
+    - Set it as a string containing a name
+
+
+- Create a variable called "damage"
+    - Set it to a value of "7.5"
+
+
+- Set the type for both variables

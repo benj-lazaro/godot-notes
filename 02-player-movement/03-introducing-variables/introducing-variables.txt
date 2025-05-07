@@ -1,0 +1,107 @@
+Introducing Variables
+---------------------
+- Variables are containers
+    - Stores different types of data
+
+    - Godot comes with its own built-in variables
+        - e.g. rotation_degrees, position, scale
+
+
+To create a new variable in GDScript
+------------------------------------
+- Use the keyword "var" then by an identifier
+    - Followed by an "=" operator & an assigned value on the same line
+    - Or assign a value to the identifier on a separate line
+
+
+Syntax:
+
+var <identifier> = <value>
+
+var <identifier>
+<identifier> = value
+
+
+Variable Naming Convention
+--------------------------
+- A variable name can NOT have spaces in-between
+    - e.g. var my variable = 100
+
+    - Use "_" to separate different words in a variable name
+        e.g. var my_variable = 100
+
+
+To Demonstrate
+--------------
+- On the "Scene" tree
+    - Select the "CharacterBody2D" node
+
+
+- On the "Inspector"
+    - Scroll down until the "Script" field
+        - Click the drop-down arrow
+        - Click the menu item "New Script..."
+        - Launches the "Attach Node Script" window
+        
+    - On the window's "Template" field
+        - Click the drop-down arrow
+        - Clich the menu item "Node: Default"
+    
+    - Click the button "Create"
+        - Launches the "Script Editor" window
+
+
+- On the "Script Editor"
+    - On the func _ready()
+        - Remove the pre-generated line of code
+
+    - Declare a variable with the name of "score"
+        - Assign the initial value of 200
+
+    - On a separate line
+        - Print the content of the variable "score" 
+            - Passing the variable as argument to the function print()
+
+    - Save the changes
+        - Run the current Scene
+
+        - On the "Output" panel
+            - The value of the variable score is printed
+
+
+Variable Data Types
+-------------------
+- Commonly used variable data types
+    - String (String)
+        - Group of text surrounded by a pair of ""
+
+    - Integers (int)
+        - Whole numbers
+
+    - Floats (float)
+        - Decimal numbers
+
+    - Booleans (bool)
+        - Two values only, either "true" or "false"
+
+
+Type Annotation
+---------------
+- A variable can be specified with a type during its creation
+    - Add a ":" after the variable name (identifier)
+        - Then declare the data type of the value (e.g. string, boolean, etc.)
+        - Followed by the "=" operator and the corresponding value
+        - e.g. var my_variable: int = 100, var username: string = "Bob"
+
+    - This prevents from accidentally assigning a different data type
+        - To a variable througout the execution of the script
+        - Doing so, Godot will flag an error
+
+    - NOTE: When unsure of the approprite keyword for the data type
+        - Type the first two (2) letters
+        - Then auto-complete will pop-up & provide a hint
+
+
+Syntax:
+
+var <identifier>: <data_type> = <value>
