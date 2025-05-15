@@ -1,0 +1,131 @@
+if Statements & Reading Inputs
+------------------------------
+- An "if" statement is a block of code
+    - That runs when a condition is true
+    
+    - Parenthesis around conditions are allowed
+        - But NOT required
+
+    - Block of code following an "if" statement
+        - Script editor automatically indents the content to the right
+    
+    - Simple conditions are created by using the if/else/elif syntax
+    
+    - Reference (https://github.com/godotengine/godot-docs/blob/master/tutorials/scripting/gdscript/gdscript_basics.rst#if-else-elif)
+
+
+Syntax:
+
+if <condition>:
+    statement(s)
+elif <condition>:
+    statement(s)
+else:
+    statement(s)
+
+
+- GDScript has the following Conditional Operators
+    - >     Greater than
+    - <     Less than
+    - >=    Greater than or Equal to
+    - <=    Less than or Equal to
+    - ==    Equal to
+    - !=    Not Equal
+  
+
+- The "if" statement can be used to check
+    - If a player has pressed a specific button for movement of a game character
+
+    - On the Script editor
+        - Declare an "if" statement inside the function _process()
+            - Waits for a player to press a specific button throughout the execution of a Scene
+
+        - Pass "Input.is_action_pressed()" 
+            - As the condition to the "if" statement
+            - This Input Action waits for a button to be pressed
+
+        - Pass the argument value "ui_right" to the method ".is_action_pressed()"
+            - This states the specific button to be pressed
+            
+            - NOTE: The value "ui_right" is a built-in value
+
+        - If "Input.is_action_pressed("ui_right")" returns true
+            - Display a message "You're pressing right" on the Output panel
+
+        - Save the changes
+        
+    - Run the Scene
+        - Test by pressing the keyboard's Right Arrow Key
+
+
+- To view the current project's Input Actions
+    - Click the menu "Project"
+
+    - Click the menu item "Project Settings..."
+        - Launches the "Project Settings" window
+
+    - Click the tab "Input Map"
+        - By default, it is empty
+        - Lists Input Actions that exists
+        
+
+- To view built-in Input Actions
+    - Click the slider "Show Built-in Actions"
+        - Populates the "Input Map" with built-in Input Actions
+
+        - These Input Actions are used for User Interfaces
+            - Such as selecting buttons with a game controller
+
+    - When moving a game character in a Scene
+        - It is best to create its own Input Action
+
+
+- To create an Input Action for the movement of a game character
+    - Click the slider "Show Built-in Actions"
+        - To hide the built-in Input Actions (if open)
+
+    - Click on the text bar "Add New Action"
+
+    - Write the name of the Input Action
+        - e.g. "move_right"
+
+    - Click the button "+Add"
+        - Creates the Input Action 
+        
+        - Updates the content of the "Input Map" window
+
+    - Assign an Event for the Input Action
+        - Click the button "+"
+
+    - Launches the "No Event Configured" window
+        - Lists every single button that can be pressed
+
+    - On the field "Listening for Input"
+        - Press the preferred keyboard key, gamepad button or joystick axis       
+            - Godot automatically selects it
+            - e.g. keyboard Right Arrow Key
+
+        - Click the button "OK"
+            - To associated the selected Event to the corresponding Input Action
+
+        - NOTE: To assign multiple Events for an Input Action
+            - Click the button "+" again
+            
+            - Select another Event
+                - e.g. keyboard letter "d"
+
+        - Click the button "Close"
+            - To save the changes made and close the "Input Map"
+
+    - Move back to the Script editor
+        - On the "if" statement
+
+        - Replace the argument value "ui_right" with Input Action "move_right"
+
+        - Save the changes
+
+    - Run the Scene
+        - Press either the keyboard Right Arrow Key or letter "d"
+
+        - Displays the message "You're pressing right"
+            - On the Output panel

@@ -1,0 +1,8 @@
+Challenge
+---------
+- Create Input Actions for "move_left", "move_up" & "move_down"
+
+- Print the corresponding message for each Input Action
+    - e.g. "You're pressing left"
+
+    
