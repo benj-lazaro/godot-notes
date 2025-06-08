@@ -1,0 +1,143 @@
+Moving The Player
+-----------------
+- Moving a Player Character uses a new variable type called a "vector2"
+
+
+- To move a Game Character
+    - Launch the Script Editor
+        - Click the tab "Script"
+
+    - Godot offers an easy to move a Game Character in all 4 directions
+        - Using the function "Input.get_vector()" inside "_process()"
+
+        - It requires 4 argument values
+            - negative_x (left) 
+            - positive_x (right)
+            - negative_y (up)
+            - positive_y (down)
+
+        - Each represents a direction & corresponding input key / button
+            - Defined in the project's "Input Map"
+
+        - Pass the declared names as argument values
+
+        Syntax:
+
+        Input.get_vector(<negative_x>, <positive_x>, <negative_y>, <positive_y>)
+
+
+        - Returns a "vector2" value
+            - A value containing two (2) float numbers representing X & Y axis directions
+
+            - Shows the direction that a Game Character is heading to
+                - A "vector2" of (1.0, 0.0)     = moving right
+                - A "vector2" of (-1.0, 0.0)    = moving left
+                - A "vector2" of (0.0, -1.0)    = moving up
+                - A "vector2" of (0.0, 1.0)     = moving down
+        
+            - Holding down two keys / button at the same time
+                - Returns a "vector2" value of "0.70" for each axis
+
+                - Representing a diagonal movement
+                    - Godot performs a behind-the-scenes math
+                    - Resulting to a value lesser than "1.0"
+
+                    - Prevents from diagonal movement from being faster
+                    - Ensuring it has the same speed as the other 4 directions
+
+
+    - Instead of playing around a Game Character's "position" value
+        - It is best practice to use the built-in variable "velocity" instead
+            - For moving a "CharacterBody2D" type 
+
+        - This prevents from unintentionally a Game Character from
+            - Going into walls & getting stuck in other places
+
+        - Simply by assigning the returned "vector2" value 
+            - To the built-in variable "velocity"
+
+
+    - Finally call the function "move_and_slide()"
+        - It is special function in a "CharacterBody2D"
+
+        - It takes the value assigned to "velocity"
+            - Applies it to move the Game Character
+
+        - Without calling this function
+            - The Game Character will NOT move
+
+
+- Create a new "2D Scene" outside the Game Character
+    - Click the button "2D"
+
+    - Click the menu "Scene"
+        - Click the button "2D Scene"
+        - Replace the name "Node2D" with "GameScene"
+        - Press ENTER
+        
+        - Save changes (CTRL + S)
+
+        - Create a new folder
+            - Name it "GameScene"
+            - Click the button "OK"
+
+        - Click the button "Save"
+
+    - Add the Game Character into the created Scene
+        - From the "FileSystem" tree
+        - Click, drag & drop the "player.tscn" into the Scene's Viewport
+
+    - On the tab "Inspector"
+        - Under "Transform"
+
+        - Reset the Game Character's position
+            - On the "Position" field
+            
+            - Click the "reload" button 
+                - To reset the Game Character's position to (0.0, 0.0)
+
+        - Zoom in the Viewport
+            - To properly see the Game Character
+
+    
+    - To add a zoom in camera to "GameScene"
+        - Right-click on "GameScene"
+
+        - Select "Add Child Node..."
+
+        - Look for "Camera2D"
+            - This allows to choose which part of a Scene to show in the Game
+            - It follows a Game Character around
+
+        - Click the button "Create"
+
+        - In the Inspector tab
+            - Set the value of 5 to "Zoom"
+            - This allows to zoom in on a Game Character
+
+        - A Pink colored rectangle surrounds the Game Character
+            - Depicts what the camera currently sees & shown when the Scene is run
+
+    
+    - Run the Scene
+        - The Game Character moves painfully slow
+            - Due to the value of "velocity" NOT being high enough
+    
+        - To address this
+            - Switch back to the Script Editor
+            - Multiply the value of "move_vector" by 100
+            - Save the changes
+        
+        - Run the Scene again
+    
+
+    - On the tab "Scene
+        - Click "CharacterBody2D"
+
+        - Set the "Motion Mode" from "Grounded" to "Floating"
+            - This helps move the Game Character in all directions
+            
+            - "Grounded" meant for platform Game Character that have gravity
+
+
+

@@ -1,0 +1,8 @@
+Challenge
+---------
+- Create a new variable "move_speed" in "_process()"
+    - Set it to a value of 100
+
+    - Replace "move_vector * 100" with "move_vector * move_speed"
+
+    
