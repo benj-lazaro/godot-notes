@@ -16,11 +16,11 @@ func _process(_delta: float) -> void:
 		print("You're pressing right")
 
 	# Challenge - if Statement & custom Input Action
-	if Input.is_action_just_pressed("move_left"):
+	if Input.is_action_pressed("move_left"):
 		print("You're pressing left")
 		
-	if Input.is_action_just_pressed("move_down"):
+	if Input.is_action_pressed("move_down"):
 		print("You're pressing down")
 		
-	if Input.is_action_just_pressed("move_up"):
+	if Input.is_action_pressed("move_up"):
 		print("You're pressing up")
