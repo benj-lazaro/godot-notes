@@ -1,0 +1,13 @@
+Challenge #01
+-------------
+- Add a Godot's icon (icon.svg) into the Viewport
+    - If have NOT done already
+
+- Move the icon 
+    - To the center of the Viewport's screen
+
+- Rotate the icon
+    - To be upside down (180 degrees)
+
+- Scale the icon
+    - To be twice (2x) as big as it usually is
