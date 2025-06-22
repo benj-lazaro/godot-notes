@@ -1,0 +1,103 @@
+Godot's 4.4 Game
+----------------
+- The Godot toolbar's "Game" tab
+    - An added feature on the version 4.4 release
+
+    - Provide a Game Workspace
+        - A separate window that comes with its own toolbar
+        - Runs the project on the Game Workspace
+
+    - NOTE: This is completely OPTIONAL
+
+
+Game Workspace Tools
+--------------------
+- Button "Suspend" 
+    - Pauses a moving Node inside a running game
+
+
+- Button "Input"
+    - Executes the game normally
+    - Selected by default
+
+
+- Button "2D"
+    - Disables ALL inputs to a 2D game
+        - e.g. unable a game character to move
+
+    - Allows to select a Node in a Scene
+        - View or change its settings in the Inspector panel
+        - While the game is running
+
+
+- Button "3D"
+    - Offers the same functionality as the button "2D" 
+        - EXCEPT this is for a 3D game
+
+
+- Button "Toggle Selection Visibility"
+    - Show / hide the outline surrounding a selected Node
+
+
+- Button "Select Mode" (Press Q)
+    - Allows to select a Node in a Scene while the game is running
+    - Enabled by default
+
+
+- Button "Show list of selectable nodes at position clicked"
+    - This ONLY works for overlapping Nodes
+        - Located on the same area in a Scene
+
+    - When enabled
+        - Hold down the left-mouse button on
+            - The area where Nodes overlaps each other
+
+        - Opens a conttext menu with a list of
+            - Overlapping Nodes to choose from
+
+
+- Button "Override the in-game camera"
+    - Controls the in-game camera when enabled
+
+    - To zoom the camera in / out
+        - Use the mouse's scroll wheel
+            - Or two (2) fingers on a laptop's touchpad
+        
+    - To drag the camera
+        - Hold down the mouse's scrool wheel
+            - Or press CTRL + two fingers on a laptop's touchpad
+
+    - When disabled
+        - Reverts back the in-game camera to its initial settings
+
+
+- Button "Embedded game size is based on the project settings"
+    - Game Workspace is smaller than the desired screen size of the game
+        - Selected by default
+
+
+- Button "Keep the aspect ratio of the embedded game"
+    - Scales up the game's height
+        - But retains the same shape
+        - Feels like the game is zoomed out
+
+        
+- Button "Embedded game size stretches to fit the Game Workspace"
+    - Streches the game in order to fit the Game Workspace
+        - Ignores the game's intended shape
+        - NOTE: ONLY works when the Game Workspace is maximized 
+
+
+- Button "Embedding Options"
+    - Unchecking the checkbox "Embed Game on Next Play"
+        - Launches the Game Workspace
+            - Without the embedded toolbar
+
+        - Checked by default
+
+    - Unchecking the checkbox "Make Game Workspace Floating on Next Play"
+        - Launches the Game Workspace embedded inside the Godot's Viewport
+            - Instead of a floating separate window
+
+        - Runs the game
+        - Checked by default
