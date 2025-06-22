@@ -1,0 +1,86 @@
+Setting Up Godot 
+----------------
+- Download the installer from official website (https://godotengine.org/)
+    - Select the latest release of the regular Godot engine
+        - NOT the .NET version
+
+        - The difference between the two is that the latter
+            - Write code using the C# programming language
+            - Instead of the GDScript
+
+
+- To install
+    - Extract the installer (.zip) to a preferred folder
+
+    - NOTE: For Windows OS
+        - Two (2) executable files will be extracted from the .zip file
+
+        - Delete the file "Godot_vx.x-stable-win64_console.exe"
+            - This is the Godot Console
+            - It provides more information as the Godot engine currently runs
+            - Intended for advanced users that allows to see what Godot is doing
+
+
+- To open Godot
+    - Simply double-click the file
+        - With the Godot icon (Windows)
+        - With the filename "godot_vx.x.x-stable_linux.x86_64" (Linux)
+
+    - Opens the window "Project Manager"
+        - List all of the (previous) project created
+
+        - Lists nothing
+            - If running Godot for the first time
+
+
+- To setup a new project
+    - At the center of the window "Project Manager"
+        - Click the button "Create New Project"
+
+        - Alternatively: At the top-left corner of the window "Project Manager"
+            - Click the button "Create"
+
+    - Opens the window "Create New Project"
+
+    - On the field "Project Name:"
+        - Type the name of the project
+
+        - For this lesson
+            - Type the name "Godot Adventure"
+
+        - NOTE: This can be changed at a later time
+
+    - On the field "Project Path:"
+        - Either leave the default path or change to a preferred location
+            - If choosing the latter option
+            - Click the button "Browser"
+
+        - For this lesson
+            - Choose your preferred project path
+
+        - NOTE: This can be changed at a later time
+
+    - On the section "Renderer"
+        - Choose the appropriate renderer for the project
+            - Forward+ 
+            - Mobile
+            - Compatibility
+
+        - Decides how advanced the project's graphics will be
+            - And supported platforms (e.g. desktop, mobile , web)
+
+        - For simple (2D) pixel art game
+            - It does NOT require any advanced graphic features
+
+        - For this lesson
+            - Click the radio button "Compatibility"
+
+        - NOTE: This can be changed at a later time
+
+
+    - Lastly, click the button "Create"
+        - To setup & create a Godot project
+
+        - NOTE: This button is labeled "Create & Edit"
+            - On the previous version of the Godot engine
+
